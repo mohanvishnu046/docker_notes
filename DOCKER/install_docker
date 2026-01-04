@@ -1,0 +1,19 @@
+Install docker in linux:
+
+sudo install docker
+// it will install docker from amazon repo to our ec2 instance
+
+sudo service docker start
+// to start docker to use
+
+sudo service docker stop
+//TO STOP docker
+
+service docker status
+// to know the status of docker that we have install either its running or stopped.
+
+
+in ec2 linux
+to know the version of installed docker
+
+docker --version
