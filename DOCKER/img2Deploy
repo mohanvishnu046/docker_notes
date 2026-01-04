@@ -1,0 +1,60 @@
+Developer Code
+   |
+Build & Test (Maven / Gradle)
+   |
+Docker Build (app → image)
+   |
+Push to AWS ECR (image repository)
+   |
+ECS Task Definition (CPU, memory, ports, image)
+   |
+ECS Service (keeps containers running)
+   |
+Application Load Balancer
+   |
+Target Group (registered ECS tasks)
+   |
+ECS Containers running application
+   |
+Auto Scaling (scale up/down containers)
+   |
+Route 53 → domain → ALB
+   |
+Users access application
+
+************************************************************************************************************************
+
+[ Developer Code ]
+        |
+        v
+[ Build & Test ]
+        |
+        v
+[ Docker Image Created ]
+        |
+        v
+[ Push Image to ECR ]
+        |
+        v
+[ ECS Task Definition ]
+        |
+        v
+[ ECS Service Created ]
+        |
+        v
+[ Application Load Balancer ]
+        |
+        v
+[ Target Group ]
+        |
+        v
+[ Running ECS Containers ]
+        |
+        v
+[ Auto Scaling Enabled ]
+        |
+        v
+[ Route 53 (Domain Mapping) ]
+        |
+        v
+[ End Users Access Application ]

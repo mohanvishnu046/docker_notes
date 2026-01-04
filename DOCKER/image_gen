@@ -1,0 +1,50 @@
+// how docker image gets generate for our application
+
+Create Dockerfile in dir.
+/*
+FROM nginx:latest
+
+COPY index.html /usr/share/nginx/html/
+
+EXPOSE 80
+
+CMD ["nginx"."-g","daemon off;"]
+
+ENV PRODUCTION
+*/
+
+
+
+After DOCKER file
+
+docker build -t  your_image_name:<version> .
+here version replace with latest if you tag that image as your latest.
+
+
+**************************************Official notes*******
+FROM <image> - this specifies the base image that the build will extend.
+WORKDIR <path> - this instruction specifies the "working directory" or the path in the image where files will be copied and commands will be executed.
+COPY <host-path> <image-path> - this instruction tells the builder to copy files from the host and put them into the container image.
+RUN <command> - this instruction tells the builder to run the specified command.
+ENV <name> <value> - this instruction sets an environment variable that a running container will use.
+EXPOSE <port-number> - this instruction sets configuration on the image that indicates a port the image would like to expose.
+USER <user-or-uid> - this instruction sets the default user for all subsequent instructions.
+CMD ["<command>", "<arg1>"] - this instruction sets the default command a container using this image will run.
+
+example:
+FROM python:3.13
+WORKDIR /usr/local/app
+
+# Install the application dependencies
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy in the source code
+COPY src ./src
+EXPOSE 8080
+
+# Setup an app user so the container doesn't run as the root user
+RUN useradd app
+USER app
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
