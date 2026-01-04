@@ -1,0 +1,16 @@
+cd .. change the dir
+
+
+cp folder/* newfolder/
+//Above cmd will copy old folder to new folder
+
+echo message to print in cmd prompt
+
+// eg echo Start building your image.
+
+vim file_name  // to edit that file.
+// it will open that file as text editor in linux now we can edit the content in that file
+
+cat file_name  // view
+//  it will open that file as text editor in linux now we can view the content in that file.
+

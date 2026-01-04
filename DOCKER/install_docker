@@ -1,6 +1,6 @@
 Install docker in linux:
 
-sudo install docker
+sudo install docker/ yum install docker
 // it will install docker from amazon repo to our ec2 instance
 
 sudo service docker start

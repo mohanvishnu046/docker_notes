@@ -24,7 +24,8 @@ Target Group (registered ECS tasks)
    |
 ECS Containers running application
    |
-Auto Scaling (scale up/down containers)
+Auto Scaling (scale up/down containers) (scale-in -> remove task from ECS cluster) (scale-out -> add new tasks to ECS cluster)
+                                        (cooling period -> wait particular time before adding remove tasks from/to ECS)
    |
 Route 53 → domain → ALB
    |
