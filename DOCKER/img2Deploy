@@ -1,4 +1,12 @@
-Developer Code
+We build and test the application, containerize it using Docker, store the image in ECR,
+deploy it on ECS using a task definition and service, expose it through an Application Load Balancer with auto-scaling enabled,
+and map the domain using Route 53 for user access.
+
+
+*****************************************************************
+flow of tasks performed while deploying app in ECS
+
+developer Code
    |
 Build & Test (Maven / Gradle)
    |
