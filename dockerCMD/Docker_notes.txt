@@ -1,0 +1,47 @@
+DOCKER CMD
+
+docker images 
+// to see all local images
+
+docker pull image_name 
+// pull docker image in local from docker repo
+
+docker run imageName
+// to run image as container
+//run the in interactive mode
+
+docker run -d imageName
+// to run image as container in background
+//not in interactive mode
+
+docker run -d -p 80:80 in interactive mode
+// run image  with particular port got mapped.
+
+docker stop contianer_id
+// to that particular container
+
+docker ps
+// info of running containers
+
+docker ps -a
+// info of running/existing containers 
+
+
+**example*****ngnix******
+docker pull ngnix
+
+docker run ngnix -d
+
+docker run ngnix -d -p 80:80
+
+here 80:80
+like ec2_port:container_port
+ngnix is exposed on 80 port
+and I add inbound rule for 80 to listen ngnix_port
+
+***example****httpd******apache
+docker run httpd
+docker run httpd -d -p 8080:80
+here I add inbound 8080 to listen container_port of httpd 80.
+ 
+ 
